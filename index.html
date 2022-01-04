@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body onload="table.fetchData();">
+    <section class="table-conatiner">
+      <h1>Hide/Show</h1>
+      <div class="btn-container">
+        <button class="btn" type="button" onclick="showHideColumn('firstName')">
+          First name
+        </button>
+        <button class="btn" type="button" onclick="showHideColumn('lastName')">
+          Last name
+        </button>
+        <button class="btn" type="button" onclick="showHideColumn('about')">
+          About
+        </button>
+        <button class="btn" type="button" onclick="showHideColumn('eyeColor')">
+          Eye color
+        </button>
+      </div>
+      <table class="table">
+        <tr class="table__heading">
+          <th class="heading__item firstName" onclick="sort(0)">First name</th>
+          <th class="heading__item lastName" onclick="sort(1)">Last name</th>
+          <th class="heading__item about" onclick="sort(2)">About</th>
+          <th class="heading__item eyeColor" onclick="sort(3)">Eye color</th>
+        </tr>
+      </table>
+    </section>
+    <div class="form-container">
+      <form class="form-container__form" onsubmit="table.sendToTable(event)">
+        <label for="firstName" class="label">Fisrt name</label>
+        <input type="text" name="firstName" id="firstName" />
+        <label for="lastName" class="label">Second name</label>
+        <input type="text" name="lastName" id="lastName" />
+        <label for="about" class="label">About</label>
+        <textarea type="text" name="about" id="about"></textarea>
+        <label for="eyeColor" class="label">Eye color</label>
+        <input type="text" name="eyeColor" id="eyeColor" />
+        <div class="btn-container">
+          <button type="submit" class="btn accept">accept</button>
+          <button
+            type="button"
+            class="btn decline"
+            onclick="document.querySelector('.form-container').classList.remove('show')"
+          >
+            decline
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/sort.js"></script>
+    <script src="./js/column.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+.table-conatiner {
+  max-width: 50vw;
+  margin: auto;
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 2px solid #acacac;
+
+    .btn {
+      font-size: 1rem;
+      text-transform: capitalize;
+      margin: 0 0.5rem;
+      letter-spacing: 1px;
+      padding: 0.375rem 0.75rem;
+      color: $black;
+      cursor: pointer;
+      @include transition-ease;
+      border-radius: 1rem;
+      border: none;
+      margin-bottom: 1rem;
+
+      &:hover {
+        background: darken(#efefef, 7%);
+      }
+    }
+  }
+
+  .table {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .heading__item {
+      padding: 1rem;
+      @include transition-ease;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($green, 5%);
+      }
+
+      &.hide {
+        display: none;
+      }
+    }
+    .td {
+      text-align: center;
+      height: 50px;
+
+      overflow-wrap: anywhere;
+
+      &__div {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        // background: red;
+
+        &.about {
+          display: block;
+          line-height: $line-height;
+          height: 2 * $line-height;
+          overflow: hidden;
+          text-align: left;
+          margin: 0.2rem;
+          min-width: 200px;
+        }
+      }
+
+      &.hide {
+        display: none;
+      }
+    }
+  }
+
+  tr:nth-child(even) {
+    background: lighten($dark-blue, 5%);
+  }
+  tr:nth-child(odd) {
+    background: $blue;
+  }
+
+  tr:not(:first-child) {
+    @include transition-ease;
+
+    &:hover {
+      background: darken($dark-blue, 5%);
+    }
+  }
+}

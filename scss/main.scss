@@ -1,0 +1,15 @@
+@import 'config', 'form', 'table';
+
+body {
+  background: $white;
+  font-family: Lato;
+  letter-spacing: 0.04rem;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+th {
+  font-weight: 700;
+}

@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: -200%;
+  left: 0;
+  background: rgba(144, 190, 222, 0.75);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.form-container__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 25vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-container__form label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-shadow: 1px 0 5px #28e0a9;
+}
+
+.form-container__form input,
+.form-container__form textarea {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  border: hidden;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-container__form input:focus,
+.form-container__form textarea:focus {
+  outline: 3px solid #1ed09b;
+}
+
+.form-container__form textarea {
+  resize: none;
+  min-height: 6rem;
+}
+
+.form-container__form .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.form-container__form .btn-container .btn {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  color: #272727;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.form-container__form .btn-container .btn.accept {
+  background-color: #28e0a9;
+}
+
+.form-container__form .btn-container .btn.accept:hover {
+  background-color: #1bba8b;
+}
+
+.form-container__form .btn-container .btn.decline {
+  background-color: #e17373;
+}
+
+.form-container__form .btn-container .btn.decline:hover {
+  background-color: red;
+}
+
+.form-container.show {
+  top: 0;
+}
+
+.table-conatiner {
+  max-width: 50vw;
+  margin: auto;
+  margin-top: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.table-conatiner .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #acacac;
+}
+
+.table-conatiner .btn-container .btn {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  color: #272727;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.table-conatiner .btn-container .btn:hover {
+  background: #dddddd;
+}
+
+.table-conatiner .table {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.table-conatiner .table .heading__item {
+  padding: 1rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.table-conatiner .table .heading__item:hover {
+  background: #1ed09b;
+}
+
+.table-conatiner .table .heading__item.hide {
+  display: none;
+}
+
+.table-conatiner .table .td {
+  text-align: center;
+  height: 50px;
+  overflow-wrap: anywhere;
+}
+
+.table-conatiner .table .td__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.table-conatiner .table .td__div.about {
+  display: block;
+  line-height: 1.2rem;
+  height: 2.4rem;
+  overflow: hidden;
+  text-align: left;
+  margin: 0.2rem;
+  min-width: 200px;
+}
+
+.table-conatiner .table .td.hide {
+  display: none;
+}
+
+.table-conatiner tr:nth-child(even) {
+  background: #a4cae4;
+}
+
+.table-conatiner tr:nth-child(odd) {
+  background: #7cfce0;
+}
+
+.table-conatiner tr:not(:first-child) {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.table-conatiner tr:not(:first-child):hover {
+  background: #7cb2d8;
+}
+
+body {
+  background: #fffffe;
+  font-family: Lato;
+  letter-spacing: 0.04rem;
+  color: #272727;
+}
+
+h1,
+h2,
+h3,
+th {
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.css.map */
